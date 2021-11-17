@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../src/day01/index.ts"],
+  "sourcesContent": ["import run from \"aocrunner\"\n\nconst parseInput = (rawInput: string) => {\n  return rawInput.split(\"\\n\").map(Number)\n}\n\nconst part1 = (rawInput: string) => {\n  const input = parseInput(rawInput)\n  return input.reduce((acc, curr) => acc + curr, 0)\n}\n\nconst part2 = (rawInput: string) => {\n  const input = parseInput(rawInput)\n  const memory = {}\n  let current = 0\n  let duplicate = 0\n  while (duplicate === 0) {\n    for (let i = 0; i < input.length; i++) {\n      if (memory[current]) {\n        duplicate = current\n        break\n      }\n      memory[current] = true\n      current += input[i]\n    }\n  }\n  return duplicate\n}\n\nrun({\n  part1: {\n    tests: [\n      // { input: ``, expected: \"\" },\n    ],\n    solution: part1,\n  },\n  part2: {\n    tests: [\n      // { input: ``, expected: \"\" },\n    ],\n    solution: part2,\n  },\n  trimTestInputs: true,\n})\n"],
+  "mappings": "AAAA;AAEA,MAAM,aAAa,CAAC,aAAqB;AACvC,SAAO,SAAS,MAAM,MAAM,IAAI;AAAA;AAGlC,MAAM,QAAQ,CAAC,aAAqB;AAClC,QAAM,QAAQ,WAAW;AACzB,SAAO,MAAM,OAAO,CAAC,KAAK,SAAS,MAAM,MAAM;AAAA;AAGjD,MAAM,QAAQ,CAAC,aAAqB;AAClC,QAAM,QAAQ,WAAW;AACzB,QAAM,SAAS;AACf,MAAI,UAAU;AACd,MAAI,YAAY;AAChB,SAAO,cAAc,GAAG;AACtB,aAAS,IAAI,GAAG,IAAI,MAAM,QAAQ,KAAK;AACrC,UAAI,OAAO,UAAU;AACnB,oBAAY;AACZ;AAAA;AAEF,aAAO,WAAW;AAClB,iBAAW,MAAM;AAAA;AAAA;AAGrB,SAAO;AAAA;AAGT,IAAI;AAAA,EACF,OAAO;AAAA,IACL,OAAO;AAAA,IAGP,UAAU;AAAA;AAAA,EAEZ,OAAO;AAAA,IACL,OAAO;AAAA,IAGP,UAAU;AAAA;AAAA,EAEZ,gBAAgB;AAAA;",
+  "names": []
+}
