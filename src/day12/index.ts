@@ -1,6 +1,4 @@
 import run from "aocrunner"
-import { CLIENT_RENEG_WINDOW } from "tls"
-import { log } from "./../utils/index.js"
 
 const parseInput = (rawInput: string) => rawInput.split("\n\n")
 
