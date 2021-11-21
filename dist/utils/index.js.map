@@ -1,7 +1,7 @@
 {
   "version": 3,
-  "sources": [],
-  "sourcesContent": [],
-  "mappings": "",
+  "sources": ["../../src/utils/index.ts"],
+  "sourcesContent": ["/**\n * Root for your util libraries.\n *\n * You can import them in the src/template/index.ts,\n * or in the specific file.\n *\n * Note that this repo uses ES Modules, so you have to explicitly specify\n * .js extension (yes, .js not .ts - even for TypeScript files)\n * for imports that are not imported from node_modules.\n *\n * For example:\n *\n *   correct:\n *\n *     import _ from 'lodash'\n *     import myLib from '../utils/myLib.js'\n *     import { myUtil } from '../utils/index.js'\n *\n *   incorrect:\n *\n *     import _ from 'lodash'\n *     import myLib from '../utils/myLib.ts'\n *     import { myUtil } from '../utils/index.ts'\n *\n *   also incorrect:\n *\n *     import _ from 'lodash'\n *     import myLib from '../utils/myLib'\n *     import { myUtil } from '../utils'\n *\n */\n\nexport const log = (...args) => {\n  console.log(...args)\n}\n"],
+  "mappings": "AAgCO,MAAM,MAAM,IAAI,SAAS;AAC9B,UAAQ,IAAI,GAAG;AAAA;",
   "names": []
 }

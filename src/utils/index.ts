@@ -29,3 +29,7 @@
  *     import { myUtil } from '../utils'
  *
  */
+
+export const log = (...args) => {
+  console.log(...args)
+}
